@@ -42,4 +42,27 @@ boundGreet(); // I am Digbijaya Biswal from Bhubaneswar
 // - bind() returns a new function with the specified context, which can be called later.
 
 
+// --------------------------------Real-world Example----------------------------------------//
+
+//💼  NodeList is not a real array
+//When you select elements with document.querySelectorAll, it gives you a NodeList, not an actual array.
+
+const divs = document.querySelectorAll("div");
+console.log(Array.isArray(divs)); // ❌ false
+// This means you can't use array methods like forEach, map, filter directly on it.
+//To be safe, we often convert the NodeList to an array.
+
+// Solution 1: Use Array.prototype.slice.call()
+const divs2 = document.querySelectorAll("div");
+const divArray = Array.prototype.slice.call(divs2);
+
+divArray.forEach((div) => {
+  div.style.color = "blue";
+});
+//slice.call(divs) "borrows" the array's .slice() method and applies it to divs.
+
+
+//Solution 2- To convert NodeList to an array, you can use Array.from or the spread operator.
+const divsArray = Array.from(divs);
+console.log(Array.isArray(divsArray)); // ✅ true
 
