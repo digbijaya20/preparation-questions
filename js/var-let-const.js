@@ -17,7 +17,7 @@ for (let i = 0; i < 3; i++) {
         console.log(i); // 3,3,3
     }, 1000);
 }
-// This is different from let, which shares the same variable across all iterations.
+// This is different from var, which shares the same variable across all iterations.
 
 
 // -----------------------------------------------------
