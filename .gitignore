@@ -1,7 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-react-qs/node_modules
+react-machine-round-qs/node_modules
 /.pnp
 .pnp.js
 
@@ -11,7 +11,7 @@ react-qs/node_modules
 # production
 /build
 
-react-qs/package-lock.json
+react-machine-round-qs/package-lock.json
 
 # misc
 .DS_Store
