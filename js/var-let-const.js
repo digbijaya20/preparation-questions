@@ -19,3 +19,28 @@ for (let i = 0; i < 3; i++) {
 }
 // This is different from let, which shares the same variable across all iterations.
 
+
+// -----------------------------------------------------
+
+// 🛠️ Fixing var with an IIFE (Immediately Invoked Function Expression)
+//Before let, people used this trick to "trap" the value of i:
+for (var i = 0; i < 3; i++) {
+    (function(iCopy) {
+        setTimeout(() => {
+            console.log(iCopy); // 0, 1, 2
+        }, 1000);
+    })(i);
+}
+
+// 🔍 What's happening here:
+// iCopy is a parameter of the immediately-invoked function.
+
+// You're passing the current value of i to it.
+
+// That value is captured in its own function scope.
+
+// Then the arrow function inside setTimeout closes over iCopy, not i.
+
+// So when the loop ends, the timeouts still have access to the values 0, 1, and 2 — not just the final value of i.
+
+//This way, you pass i into a new function scope, which works like how let does.
