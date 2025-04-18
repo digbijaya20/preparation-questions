@@ -21,5 +21,8 @@ They help your app fail gracefully instead of breaking completely when something
 * Asynchronous errors (like inside setTimeout)
 
 * Server-side rendering errors
+> [!NOTE]
+> As of v16.2.0, there's no way to turn a functional component into an error boundary. The ** componentDidCatch() **  method works like a JavaScript ** catch {} **  block, but for components. 
+> Only class components can be error boundaries. In practice, most of the time you’ll want to declare an error boundary component once and use it throughout your application.
 
 2. 
