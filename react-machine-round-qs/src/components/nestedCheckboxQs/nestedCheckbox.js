@@ -7,9 +7,15 @@ function Checkbox (props) {
       {props.checkboxData.map((node) => {
         return (
             <div key={node.id} className ='parent'>
-                <input type='checkbox' />
+                <input type='checkbox' checked={props.checked[node.id] || false}/>
                 <label>{node.name}</label>
-                {node.children && <Checkbox checkboxData={node.children} />}
+                {node.children && 
+                <Checkbox 
+                checkboxData={node.children}
+                 checked={props.checked}
+                  setChecked={props.setChecked}
+                  />
+                  }
             </div>
         )
       }
