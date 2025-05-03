@@ -9,6 +9,8 @@
 - You wait to see if the user is still typing/clicking/etc.
 - If they stop for X milliseconds, then you run the function.
 
+> Debounce delays a function from running until after a certain time has passed since the last time it was invoked.
+
 ## 📦 Real-life analogy
 Think of a search box:
 
