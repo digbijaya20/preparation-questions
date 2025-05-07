@@ -1,0 +1,1 @@
+Developed a dynamic dropdown component in React where the second dropdown updates based on the selected value of the first (e.g., selecting a country loads its states).

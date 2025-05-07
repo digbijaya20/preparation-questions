@@ -4,6 +4,7 @@ import Checkbox from './components/nestedCheckboxQs/nestedCheckbox';
 import TrafficLightComponent from './components/trafficLightQs/trafficeLightQs';
 import checkboxData from './shared/mockData/checkboxData';
 import DebounceComponent from './components/debounceQs/debounce';
+import CountryStateDependentDropdown from './components/countryStateDependentDropdown/countryStateDependentDropdown';
 
 function App() {
   const [checked, setChecked] = useState({1: true});
@@ -14,8 +15,9 @@ function App() {
       checked={checked}
       setChecked={setChecked}
       />
-       {/* <TrafficLightComponent  /> */}
+       <TrafficLightComponent  />
        <DebounceComponent/>
+       <CountryStateDependentDropdown/>
     </div>
   );
 }
