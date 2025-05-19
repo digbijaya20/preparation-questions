@@ -2,6 +2,6 @@
 
 📁 #Repository Structure
 
-*js/*: Contains JavaScript-related interview questions, covering topics such as closures, scope, and asynchronous programming.​
+**js/**: Contains JavaScript-related interview questions, covering topics such as closures, scope, and asynchronous programming.​
 
-*react-qs/*: Includes React-specific questions, focusing on hooks, component lifecycle, and state management.
+**react-qs/**: Includes React-specific questions, focusing on hooks, component lifecycle, and state management.
