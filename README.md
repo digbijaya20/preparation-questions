@@ -10,8 +10,8 @@ The interview-qs repository is a curated collection of technical interview quest
 ### 📘 JavaScript Interview Questions
 
 1. [What is Hoisting in JavaScript?](./js/hoisting.md)
-2. [Explain Closures with Examples.](./js/closures.md)
-3. [Difference Between `var`, `let`, and `const`](./js/var-let-const.md)
+2. [Explain Closures with Examples.](./js/closures.js)
+3. [Difference Between `var`, `let`, and `const`](./js/var-let-const.js)
 4. [What is the Event Loop?](./js/event-loop.md)
 5. [Explain `this` in JavaScript.](./js/this.md)
 6. [What are Promises and Async/Await?](./js/promises-async-await.md)
@@ -21,3 +21,4 @@ The interview-qs repository is a curated collection of technical interview quest
 10. [What is a Callback Function?](./js/callbacks.md)
 11. [Explain Shadow DOM.](./js/shadow-dom.md)
 12. [What are Higher-Order Functions?](./js/higher-order-functions.md)
+13. [What are `call`, `apply` and  `bind`?](./js/call-apply-bind.js)
