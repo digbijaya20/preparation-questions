@@ -66,5 +66,20 @@ function throttle(func, limit) {
 
 > ✅ Handles scroll once every 200ms, even if user scrolls constantly
 
+# 2.  🔁 What is Shadow DOM?
+Shadow DOM is a web standard that allows developers to encapsulate a piece of HTML, CSS, and JavaScript so that it is isolated from the rest of the document. It’s a key part of Web Components, enabling better modularity and reusability of UI elements.
 
+## In simple terms:
+The Shadow DOM creates a "shadow tree" inside an element—a hidden DOM subtree that is rendered but not accessible by default from the main document’s DOM.
+
+## Key Benefits:
+- **Encapsulation**: Styles and scripts inside the shadow DOM don’t affect the rest of the page, and vice versa.
+
+- **Scoped styling**: CSS defined in a shadow root applies only to elements inside it.
+
+- **Cleaner structure**: You can build components (like <my-button>) without worrying about style or script clashes.
+
+## Use Cases:
+- Custom elements and design systems
+- Embeddable widgets (e.g. video players, chat boxes)
 
