@@ -4,9 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #color-box{
+            height: 200px;
+            width: 200px;
+            background-color: gray;
+            border: 1px solid black;
+        }
+       .color-option-box{
+        height: 70px;
+        width: 70px;
+        border: 1px solid black;
+        margin-right: 20px;
+       }
+       #color-array-container{
+        margin-Top: 50px;
+        display: flex;
+       }
+    </style>
 </head>
 <body>
-    //add local file
+    <!-- html for dynamic color change box -->
+     <div id="color-box"></div>
+     <div id="color-list"> </div>
+    
+    
+     <script src="dynamic-color-change-box.js"></script>
     <script src="polyfil-bind-method.js"></script>
     <script src="call-apply-bind.js"></script>
 </body>
