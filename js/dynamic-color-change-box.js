@@ -8,7 +8,7 @@ const colors = ['green','red', 'yellow', 'black'];
 
 colors.forEach(color =>{
     const colorItem = document.createElement('div');
-    colorItem.classList.add('color-option-box');
+    colorItem.classList.add('color-item');
     colorItem.style.backgroundColor = color;
 
     colorItem.addEventListener('click', ()=>{

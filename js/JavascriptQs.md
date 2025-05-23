@@ -83,3 +83,42 @@ The Shadow DOM creates a "shadow tree" inside an element—a hidden DOM subtree 
 - Custom elements and design systems
 - Embeddable widgets (e.g. video players, chat boxes)
 
+# 3.  Write a function to flatten below nested structure to array ?
+
+```
+let obj = {
+    name: "Digbijaya Biswal",
+    previousCompany: { id: 1, name: "Item One", available: true },
+    location: ["Odisha", "Bengaluru"],
+    previousCompany: ['LectureNotes', 'Cognizant', 'Thermo Fisher Scientific'],
+    working: true,
+    employerInfo: { id: 1, name: "Thermo Fisher", available: true }
+}
+
+```
+
+Output
+```
+['Digbijaya Biswal', 'Odisha', 'Bengaluru', 'LectureNotes', 'Cognizant', 'Thermo Fisher Scientific', true, 1, 'Thermo Fisher', true]
+```
+
+### Ans
+```
+function flattenObjectValues(obj, resultArray = []) {
+        // let resultArray = [];
+        for (let key in obj) {
+            if (typeof obj[key] === 'object' && obj[key] !== null) {
+                if (Array.isArray(obj[key])) {
+                    resultArray.push(...obj[key]);
+                } else {
+                    // resultArray.push(...flattenObjectValues(obj[key]));
+                    flattenObjectValues(obj[key], resultArray)
+                }
+            } else {
+                resultArray.push(obj[key]);
+            }
+        }
+        return resultArray; // Return instead of logging inside
+}
+```
+
