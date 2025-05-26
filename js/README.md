@@ -158,6 +158,63 @@ function deepEqual(a, b) {
 console.log(isEqual(obj1, obj2)); // true
 
 ```
-> !deepEqual(a[key], b[key]) means:
+> **!deepEqual(a[key], b[key])** means:
 "If the values at this key are not deeply equal, we can stop and say the objects are not the same."
+
+# 4. Difference between Promises Vs async await in Javascript?
+
+- **Promises** and **async/await** are two approaches for handling asynchronous operations in JavaScript.
+- Promises provide a more structured alternative to callbacks using .then() and .catch() for chaining and error handling. However, with complex flows, they can quickly become hard to read or manage — especially with nested chains.
+
+-Async/await, introduced in ES2017, is syntactic sugar over Promises that allows us to write asynchronous code in a synchronous style, which improves readability and maintainability. It makes sequential logic clearer, integrates well with try/catch for error handling, and pairs nicely with constructs like Promise.all() for running tasks in parallel.
+
+- I typically default to async/await for cleaner, linear flows, but I still use raw Promises when I need more fine-grained control over chaining or concurrency."
+
+```
+function getUser() {
+  return fetch('/api/user').then(res => res.json());
+}
+
+function getPosts(userId) {
+  return fetch(`/api/posts?userId=${userId}`).then(res => res.json());
+}
+
+```
+✅ Using Promises
+getUser()
+  .then(user => {
+    return getPosts(user.id);
+  })
+  .then(posts => {
+    console.log('Posts:', posts);
+  })
+  .catch(error => {
+    console.error('Error fetching data:', error);
+  });
+```
+
+```
+✅ Async/Await Version:
+async function loadUserAndPosts() {
+  try {
+    const user = await getUser();
+    const posts = await getPosts(user.id);
+    console.log('Posts:', posts);
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+}
+
+loadUserAndPosts();
+
+```
+| Feature            | Promises                                                | async/await                              |
+| ------------------ | ------------------------------------------------------- | ---------------------------------------- |
+| **Syntax Style**   | Uses `.then()` and `.catch()`                           | Uses `try...catch` with `await`          |
+| **Readability**    | Can get messy with many `.then()` calls (callback-like) | Cleaner and easier to read               |
+| **Error Handling** | `.catch()` for errors                                   | `try...catch` blocks                     |
+| **Control Flow**   | Harder to write sequential steps                        | Easier to write step-by-step logic       |
+| **Parallelism**    | Explicit with `Promise.all()`                           | Also supported via `await Promise.all()` |
+
+
 
