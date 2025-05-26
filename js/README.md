@@ -180,6 +180,7 @@ function getPosts(userId) {
 }
 
 ```
+```
 ✅ Using Promises
 getUser()
   .then(user => {
