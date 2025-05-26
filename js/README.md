@@ -1,9 +1,9 @@
-# 1.  🔁 What is debounce?
-## Debounce means:
+### 1.  🔁 What is debounce?
+##### Debounce means:
 
 “Wait until the user stops doing something for a certain amount of time before you respond.”
 
-## In other words:
+##### In other words:
 
 - You don’t run a function immediately.
 - You wait to see if the user is still typing/clicking/etc.
@@ -11,23 +11,23 @@
 
 > Debounce delays a function from running until after a certain time has passed since the last time it was invoked.
 
-## 📦 Real-life analogy
+##### 📦 Real-life analogy
 Think of a search box:
 
 - If you send an API request on every keystroke, it floods the server.
 - Instead, you debounce: "Only send the API request 500ms after the user stops typing."
 
-## 🧠 Why it’s useful
+##### 🧠 Why it’s useful
 - Improves performance
 - Reduces API traffic
 - Gives a smoother user experience
 
-## 💡 Think of it like:
+##### 💡 Think of it like:
 - **Debounce** = "Wait until they stop talking for a moment before responding."
 
 - **Throttle** = "Only respond once every X seconds, no matter how many times they speak."
 
-## 🔧 Code Example Comparison
+##### 🔧 Code Example Comparison
 
 ```
 > ✅ Debounce Implementation
@@ -66,24 +66,24 @@ function throttle(func, limit) {
 
 > ✅ Handles scroll once every 200ms, even if user scrolls constantly
 
-# 2.  🔁 What is Shadow DOM?
+### 2.  🔁 What is Shadow DOM?
 Shadow DOM is a web standard that allows developers to encapsulate a piece of HTML, CSS, and JavaScript so that it is isolated from the rest of the document. It’s a key part of Web Components, enabling better modularity and reusability of UI elements.
 
-## In simple terms:
+##### In simple terms:
 The Shadow DOM creates a "shadow tree" inside an element—a hidden DOM subtree that is rendered but not accessible by default from the main document’s DOM.
 
-## Key Benefits:
+##### Key Benefits:
 - **Encapsulation**: Styles and scripts inside the shadow DOM don’t affect the rest of the page, and vice versa.
 
 - **Scoped styling**: CSS defined in a shadow root applies only to elements inside it.
 
 - **Cleaner structure**: You can build components (like <my-button>) without worrying about style or script clashes.
 
-## Use Cases:
+##### Use Cases:
 - Custom elements and design systems
 - Embeddable widgets (e.g. video players, chat boxes)
 
-# 3.  Write a function to flatten below nested structure to array ?
+### 3.  Write a function to flatten below nested structure to array ?
 
 ```
 let obj = {
@@ -102,7 +102,7 @@ Output
 ['Digbijaya Biswal', 'Odisha', 'Bengaluru', 'LectureNotes', 'Cognizant', 'Thermo Fisher Scientific', true, 1, 'Thermo Fisher', true]
 ```
 
-### Ans:
+##### Ans:
 ```
 function flattenObjectValues(obj, resultArray = []) {
         // let resultArray = [];
@@ -122,17 +122,17 @@ function flattenObjectValues(obj, resultArray = []) {
 }
 ```
 
-# 4. How to check deep equality between JavaScript objects?
+### 4. How to check deep equality between JavaScript objects?
 ```
 const obj1 = { a: 1, b: { c: 2 } };
 const obj2 = { a: 1, b: { c: 2 } };
 ```
-### ⚠️ Using: JSON.stringify Comparison
+##### ⚠️ Using: JSON.stringify Comparison
 ```
 JSON.stringify(obj1) === JSON.stringify(obj2);
 ```
 
-### 🔧 Write a Custom Deep Equality Function
+##### 🔧 Write a Custom Deep Equality Function
 
 ```
 function deepEqual(a, b) {
