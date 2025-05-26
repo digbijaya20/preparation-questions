@@ -166,7 +166,7 @@ console.log(isEqual(obj1, obj2)); // true
 - **Promises** and **async/await** are two approaches for handling asynchronous operations in JavaScript.
 - Promises provide a more structured alternative to callbacks using .then() and .catch() for chaining and error handling. However, with complex flows, they can quickly become hard to read or manage — especially with nested chains.
 
--Async/await, introduced in ES2017, is syntactic sugar over Promises that allows us to write asynchronous code in a synchronous style, which improves readability and maintainability. It makes sequential logic clearer, integrates well with try/catch for error handling, and pairs nicely with constructs like Promise.all() for running tasks in parallel.
+- Async/await, introduced in ES2017, is syntactic sugar over Promises that allows us to write asynchronous code in a synchronous style, which improves readability and maintainability. It makes sequential logic clearer, integrates well with try/catch for error handling, and pairs nicely with constructs like Promise.all() for running tasks in parallel.
 
 - I typically default to async/await for cleaner, linear flows, but I still use raw Promises when I need more fine-grained control over chaining or concurrency."
 
