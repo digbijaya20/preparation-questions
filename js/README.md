@@ -102,7 +102,7 @@ Output
 ['Digbijaya Biswal', 'Odisha', 'Bengaluru', 'LectureNotes', 'Cognizant', 'Thermo Fisher Scientific', true, 1, 'Thermo Fisher', true]
 ```
 
-### Ans
+### Ans:
 ```
 function flattenObjectValues(obj, resultArray = []) {
         // let resultArray = [];
@@ -121,4 +121,43 @@ function flattenObjectValues(obj, resultArray = []) {
         return resultArray; // Return instead of logging inside
 }
 ```
+
+# 4. How to check deep equality between JavaScript objects?
+```
+const obj1 = { a: 1, b: { c: 2 } };
+const obj2 = { a: 1, b: { c: 2 } };
+```
+### ⚠️ Using: JSON.stringify Comparison
+```
+JSON.stringify(obj1) === JSON.stringify(obj2);
+```
+
+### 🔧 Write a Custom Deep Equality Function
+
+```
+function deepEqual(a, b) {
+  if (a === b) return true;
+
+  if (typeof a !== "object" || typeof b !== "object" || a === null || b === null) {
+    return false;
+  }
+
+  const keysA = Object.keys(a);
+  const keysB = Object.keys(b);
+  if (keysA.length !== keysB.length) return false;
+
+  for (const key of keysA) {
+    if (!keysB.includes(key) || !deepEqual(a[key], b[key])) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+console.log(isEqual(obj1, obj2)); // true
+
+```
+> !deepEqual(a[key], b[key]) means:
+"If the values at this key are not deeply equal, we can stop and say the objects are not the same."
 
