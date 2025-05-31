@@ -1,70 +1,46 @@
 ### 1.  🔁 What is debounce?
-##### Debounce means:
+👨💻 **𝗗𝗲𝗯𝗼𝘂𝗻𝗰𝗶𝗻𝗴** : Delay a function call until the user stops an action for a specified time. 
 
-“Wait until the user stops doing something for a certain amount of time before you respond.”
-
-##### In other words:
-
-- You don’t run a function immediately.
-- You wait to see if the user is still typing/clicking/etc.
-- If they stop for X milliseconds, then you run the function.
-
-> Debounce delays a function from running until after a certain time has passed since the last time it was invoked.
-
-##### 📦 Real-life analogy
-Think of a search box:
-
-- If you send an API request on every keystroke, it floods the server.
-- Instead, you debounce: "Only send the API request 500ms after the user stops typing."
-
-##### 🧠 Why it’s useful
-- Improves performance
-- Reduces API traffic
-- Gives a smoother user experience
-
-##### 💡 Think of it like:
-- **Debounce** = "Wait until they stop talking for a moment before responding."
-
-- **Throttle** = "Only respond once every X seconds, no matter how many times they speak."
-
-##### 🔧 Code Example Comparison
+Perfect for search boxes! Instead of firing an API call with every keystroke, debounce waits until typing stops (e.g., 500ms), reducing unnecessary calls and boosting performance.
 
 ```
-> ✅ Debounce Implementation
- function debounce(func, delay) {
-  let timeout;
-  return function (...args) {
-    clearTimeout(timeout); // Cancel any previous timer
-    timeout = setTimeout(() => {
-      func.apply(this, args); // Call after delay
-    }, delay);
+𝘧𝘶𝘯𝘤𝘵𝘪𝘰𝘯 𝘥𝘦𝘣𝘰𝘶𝘯𝘤𝘦(𝘧𝘶𝘯𝘤, 𝘥𝘦𝘭𝘢𝘺) {
+  𝘭𝘦𝘵 𝘵𝘪𝘮𝘦𝘳;
+  𝘳𝘦𝘵𝘶𝘳𝘯 𝘧𝘶𝘯𝘤𝘵𝘪𝘰𝘯(...𝘢𝘳𝘨𝘴) {
+    𝘤𝘭𝘦𝘢𝘳𝘛𝘪𝘮𝘦𝘰𝘶𝘵(𝘵𝘪𝘮𝘦𝘳);
+    𝘵𝘪𝘮𝘦𝘳 = 𝘴𝘦𝘵𝘛𝘪𝘮𝘦𝘰𝘶𝘵(() => 𝘧𝘶𝘯𝘤.𝘢𝘱𝘱𝘭𝘺(𝘵𝘩𝘪𝘴, 𝘢𝘳𝘨𝘴), 𝘥𝘦𝘭𝘢𝘺);
   };
 }
+
+𝘤𝘰𝘯𝘴𝘵 𝘩𝘢𝘯𝘥𝘭𝘦𝘚𝘦𝘢𝘳𝘤𝘩 = 𝘥𝘦𝘣𝘰𝘶𝘯𝘤𝘦(() => {
+  // 𝘚𝘦𝘢𝘳𝘤𝘩 𝘭𝘰𝘨𝘪𝘤 𝘩𝘦𝘳𝘦
+}, 500);
 ```
 
+👨💻 **𝗧𝗵𝗿𝗼𝘁𝘁𝗹𝗶𝗻𝗴** : Throttling is a technique that limits the execution of a function to once in a specified period, regardless of how many times it is triggered during that period. 
+
+Great for scroll events! Instead of running a function on every scroll event, throttle ensures it's called at most once every few milliseconds (e.g., 200ms), enhancing efficiency.
+
 ```
-> ✅ Throttle Implementation
-function throttle(func, limit) {
-  let lastCall = 0;
-  return function (...args) {
-    const now = Date.now();
-    if (now - lastCall >= limit) {
-      lastCall = now;
-      func.apply(this, args);
-    }
-  };
+𝘤𝘰𝘯𝘴𝘵 𝘵𝘩𝘳𝘰𝘵𝘵𝘭𝘦 = (𝘧𝘯, 𝘭𝘪𝘮𝘪𝘵) => {
+ 𝘭𝘦𝘵 𝘧𝘭𝘢𝘨 = 𝘵𝘳𝘶𝘦;
+ 𝘳𝘦𝘵𝘶𝘳𝘯 𝘧𝘶𝘯𝘤𝘵𝘪𝘰𝘯(){
+  𝘭𝘦𝘵 𝘤𝘰𝘯𝘵𝘦𝘹𝘵 = 𝘵𝘩𝘪𝘴;
+  𝘭𝘦𝘵 𝘢𝘳𝘨𝘴 = 𝘢𝘳𝘨𝘶𝘮𝘦𝘯𝘵𝘴;
+  𝘪𝘧(𝘧𝘭𝘢𝘨){
+   𝘧𝘯.𝘢𝘱𝘱𝘭𝘺(𝘤𝘰𝘯𝘵𝘦𝘹𝘵, 𝘢𝘳𝘨𝘴);
+   𝘧𝘭𝘢𝘨 = 𝘧𝘢𝘭𝘴𝘦;
+   𝘴𝘦𝘵𝘛𝘪𝘮𝘦𝘰𝘶𝘵(() => {
+    𝘧𝘭𝘢𝘨 = 𝘵𝘳𝘶𝘦;
+   }, 𝘭𝘪𝘮𝘪𝘵);
+  }
+ }
 }
+
+𝘤𝘰𝘯𝘴𝘵 𝘩𝘢𝘯𝘥𝘭𝘦𝘚𝘤𝘳𝘰𝘭𝘭 = 𝘵𝘩𝘳𝘰𝘵𝘵𝘭𝘦(() => {
+  // 𝘚𝘤𝘳𝘰𝘭𝘭 𝘩𝘢𝘯𝘥𝘭𝘪𝘯𝘨 𝘭𝘰𝘨𝘪𝘤 𝘩𝘦𝘳𝘦
+}, 200);
 ```
-
-<input onChange={debounce(handleSearch, 500)} />
->  ✅ Only sends API request 500ms after the user stops typing
-
-
- window.addEventListener("scroll", throttle(() => {
-  console.log("Scroll event handled");
-}, 200));
-
-> ✅ Handles scroll once every 200ms, even if user scrolls constantly
 
 ### 2.  🔁 What is Shadow DOM?
 Shadow DOM is a web standard that allows developers to encapsulate a piece of HTML, CSS, and JavaScript so that it is isolated from the rest of the document. It’s a key part of Web Components, enabling better modularity and reusability of UI elements.
