@@ -10,3 +10,65 @@
 - **Performance Monitoring**: Continuously monitor app performance using tools like Lighthouse, Web Vitals, and browser DevTools.
 - **Optimize rendering with keys**: - Ensure each list item in a mapped array has a unique and stable key prop to optimize rendering performance. Keys help React identify which items have changed, been added, or removed, minimizing unnecessary DOM updates.
 - **CDN Integration**: Serve static assets and resources from Content Delivery Networks (CDNs) to reduce latency and improve reliability.
+
+#### 2. What is useRef hook?
+useRef is a React Hook used to persist values between renders without causing re-renders.
+It’s commonly used for:
+
+- Accessing DOM elements directly
+
+- Storing mutable values (like timers, counters)
+
+- Avoiding re-renders on value updates
+```
+Syntax:
+import { useRef } from 'react';
+
+const myRef = useRef(initialValue);
+
+```
+
+```
+🔧 1. Accessing a DOM Element
+
+import React, { useRef } from 'react';
+
+function FocusInput() {
+  const inputRef = useRef(null);
+
+  const handleClick = () => {
+    inputRef.current.focus(); // Focus the input field
+  };
+
+  return (
+    <div>
+      <input type="text" ref={inputRef} />
+      <button onClick={handleClick}>Focus Input</button>
+    </div>
+  );
+}
+
+```
+
+```
+🔧 2. Compare Previous Value
+import React, { useEffect, useRef, useState } from 'react';
+
+function PreviousValue() {
+  const [number, setNumber] = useState(0);
+  const prevNumber = useRef();
+
+  useEffect(() => {
+    prevNumber.current = number;
+  }, [number]);
+
+  return (
+    <div>
+      <p>Current: {number}</p>
+      <p>Previous: {prevNumber.current}</p>
+      <button onClick={() => setNumber(n => n + 1)}>Increment</button>
+    </div>
+  );
+}
+
+```
