@@ -31,3 +31,6 @@ console.log(studentCoupon(1000));     // 850
 
 
 // Closure	A function that "remembers"
+
+
+
