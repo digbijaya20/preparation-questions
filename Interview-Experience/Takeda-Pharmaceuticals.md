@@ -1,4 +1,4 @@
-# Takeda Pharmaceuticals(Js,ReactJs)
+# Takeda Pharmaceuticals R-1(Js,ReactJs)
 
 # Js
 1. Differece between Async await and promise.
