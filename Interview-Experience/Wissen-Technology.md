@@ -112,6 +112,9 @@ ErrorHandler	Uncaught app-level JS errors
 HTTP Interceptor	API & backend error responses
 
 
+### What is shadow DOM
+
+
 
 
 
