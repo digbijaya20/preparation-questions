@@ -16,9 +16,6 @@
 
 # When should we use React.memo?
 
-
-
-
 ### Convert the given input object to a single array like the output array
  input= {
   name: "Suneel",

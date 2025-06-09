@@ -1,20 +1,28 @@
-### What are all the lifecycle hooks available in Angular?
+### What lifecycle hooks are available in Angular?
 
-### If a service is provided in the providers array of a lazy-loaded module, will it be a singleton instance?
+### If a service is provided in the providers array of a lazy-loaded module, will it behave as a singleton?
 
-### How can we make a service accessible globally across the entire Angular application?
+### How can a service be made accessible throughout the entire Angular application?
 
-### What is an interface in TypeScript, and how is it used in Angular?
+### What is an interface in TypeScript, and how is it used in Angular development?
 
-### Explain any three RxJS operators you have used in your project and how they work.
+### Describe three RxJS operators you have used in your projects and explain their functionality.
 
 ### What is a Hierarchical Injector in Angular?
 
-### What is Dependency Injection in Angular?
+### What is the benifit of Typescript over Javascript?
 
-### How to Share Data Between Two Components Without Using Parent-Child Relationship in Angular?
+### What are data types we have in typescript?
 
-### what is the difference between structural and attribute directive?
+### Explain Dependency Injection in Angular.
 
-###  Create a search input field that filters and displays a list of data as the user types. If no search query is entered, display the complete list by default. The filtering should happen automatically without a search button.
+### How can data be shared between two components that do not have a parent-child relationship in Angular?
+
+### What is the difference between structural directives and attribute directives in Angular?
+
+### What is user authentication and authorization? How do you prevent user to access any route?
+
+### What is the difference between template-driven and reactive forms?
+
+### Create a search input box that filters a list of items dynamically as the user types. If the search field is empty, the full list should be displayed. The filtering should happen automatically without a submit or search button.
 
