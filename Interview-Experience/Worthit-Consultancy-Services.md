@@ -16,6 +16,8 @@
 
 ### How do Subject and BehaviorSubject differ in RxJS?
 
+### What can cause memory leak and how would you prevent from memory leak?
+
 ### What is zone.js in Angular?
 
 ### How do you optimize an Angular application for better performance?
