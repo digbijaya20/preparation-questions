@@ -6,6 +6,10 @@
 
 ### Can you explain how the JavaScript event loop works?
 
+### What is indexDB?
+
+### What are the changes you have seen from Angular 13 to Angular 18.
+
 ### What is hoisting in JavaScript? Can you provide a basic example question related to it?
 
 ### What is the difference between mapped types and conditional types in TypeScript?
@@ -15,6 +19,8 @@
 ### What is the difference between @ViewChild and @ContentChild in Angular?
 
 ### How do Subject and BehaviorSubject differ in RxJS?
+
+### What is ReplaySubject?
 
 ### What can cause memory leak and how would you prevent from memory leak?
 
@@ -27,6 +33,10 @@
 ### For the input [1,2,3,4,5,6], if index is 2 then output is [5,6,1,2,3,4], or if index is 3 then output [4,5,6,1,2,3]?
 
 ### Given the input '(()', how many opening and closing brackets are missing?
+
+
+
+
 
 ### What are HTTP interceptors in Angular and how do they work?
 
