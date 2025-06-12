@@ -1,3 +1,5 @@
+*** 1st Round ***
+
 ### What is the difference between ngOnInit and ngAfterViewInit in Angular?
 
 ### What is a closure? Can you give a real-time example?
@@ -22,8 +24,6 @@
 
 ### What is ReplaySubject?
 
-### What can cause memory leak and how would you prevent from memory leak?
-
 ### What is zone.js in Angular?
 
 ### How do you optimize an Angular application for better performance?
@@ -36,7 +36,9 @@
 
 
 
+*** 2nd Round ***
 
+### If an API request fails, what do you do?
 
 ### What are HTTP interceptors in Angular and how do they work?
 
@@ -45,6 +47,8 @@
 ### What are the different HTTP status codes and their meanings?
 
 ### What is a generic in TypeScript and when would you use it?
+
+### What can cause memory leak and how would you prevent from memory leak?
 
 ### Integrate a public API in Angular, pass an authentication header, and display the data in a table with pagination.
 
