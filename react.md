@@ -72,3 +72,19 @@ function PreviousValue() {
 }
 
 ```
+
+#### 3. What is UseEffect hook and common pitfalls developers encounter when working with UseEffect, and how do you avoid them?
+The useEffect hook is React's way to handle side effects in functional components - things like data fetching, subscriptions, timers, or manually updating the DOM. It essentially combines the functionality of componentDidMount, componentDidUpdate, and componentWillUnmount from class components.
+
+**Most Common Mistakes:**
+
+- Missing dependencies - forgetting to include values used inside the effect
+- Infinite loops - dependencies that change on every render
+- Memory leaks - not cleaning up timers, listeners, or subscriptions
+- Stale closures - using outdated values in async operations
+
+**Quick Fixes:**
+
+- Use functional updates: setState(prev => prev + 1)
+- Always return cleanup functions for side effects
+- Use useCallback/useMemo for complex dependencies
