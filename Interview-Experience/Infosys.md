@@ -100,3 +100,34 @@ export default function App() {
 #### 2. Difference between Control component vs uncontrol ?
 #### 3. How to optimize react application? what is code splliting?
 
+
+#### Capitalize second letter of every word in the title
+
+const dummyData = [
+  { id: 1, title: 'lead front end developer', name: 'Alice Johnson' },
+  { id: 2, title: 'senior user interface designer', name: 'Bob Smith' },
+  { id: 3, title: 'junior software quality analyst', name: 'Charlie Lee' },
+  { id: 4, title: 'cloud infrastructure support engineer', name: 'Dana White' },
+  { id: 5, title: 'technical product development lead', name: 'Evan Martinez' },
+];
+
+```
+const capitalize2ndLetterInTitle = dummyData.map((item)=>{
+    const newTitle = item.title.split(' ').map((word)=>{
+        return  word[0] + word[1].toUpperCase() + word.slice(2);
+    })
+    
+    // console.log(newTitle.join(' '))
+     return  {...item, title: newTitle.join(' ')} ;
+});
+
+const hello = modi.forEach(item=>{
+    console.log(item.title )
+    console.log('----------------')
+    console.log(item.name)
+    console.log('----------------')
+})
+console.log(hello)
+
+
+```
