@@ -94,11 +94,15 @@ export default function App() {
 - Remove warnings
 - Select by clicking on label as well
 
+### Follow up question
+1. Select 1st and 2nd checkbox by default
+
 //https://stackblitz.com/edit/react-vk2myjgh?file=src%2FApp.js,src%2Findex.js
 
-
-#### 2. Difference between Control component vs uncontrol ?
+#### 2. What’s the difference between Controlled vs Uncontrolled Components in React?
 #### 3. How to optimize react application? what is code splliting?
+#### 4. What is autorization? how you will handle in node?
+#### 5. Explain the project you worked on Hackthon.
 
 
 #### Capitalize second letter of every word in the title
