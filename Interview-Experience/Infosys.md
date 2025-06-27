@@ -1,3 +1,6 @@
+#### Power Programmer specialist L1 MERN
+
+```
 import React, { useEffect, useState } from 'react';
 import './style.css';
 
@@ -69,11 +72,11 @@ export default function App() {
     </div>
   );
 }
+```
 
+#### Items list selection
 
-# Items list selection
-
-## Requirements
+#### Requirements
 
 1. Invoke API
 
@@ -89,7 +92,7 @@ export default function App() {
 3. Upon selection of atleast 5 items, enable submit button
 4. Capitalize second letter of every word in the title
 
-### Additional Points
+#### Additional Points
 
 - Remove warnings
 - Select by clicking on label as well
