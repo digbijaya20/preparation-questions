@@ -88,3 +88,34 @@ The useEffect hook is React's way to handle side effects in functional component
 - Use functional updates: setState(prev => prev + 1)
 - Always return cleanup functions for side effects
 - Use useCallback/useMemo for complex dependencies
+
+
+#### 4. Output of below code?
+```
+import { useState, useEffect } from 'react';
+
+function Counter() {
+  const [c, setC] = useState(0);
+
+  useEffect(() => {
+    console.log('Before updates:', c);
+    setC(prev => prev + 1);
+    setC(prev => prev + 1);
+    setC(prev => prev + 1);
+    console.log('After scheduling updates (still stale):', c);
+  }, []); // empty dependency → runs once on mount
+
+  console.log('Render with c =', c);
+
+  return <div>{c}</div>;
+}
+
+```
+o/p
+```
+Render with c = 0
+Before updates: 0
+After scheduling updates (still stale): 0
+Render with c = 3
+
+```
