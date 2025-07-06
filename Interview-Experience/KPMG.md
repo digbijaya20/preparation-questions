@@ -14,6 +14,8 @@ Write an example of calling an external API
 
 How do you secure you API in application
 
+Difference between ngOninit and constructor
+
 What is intercepter 
 
 How do you install external package in angular
