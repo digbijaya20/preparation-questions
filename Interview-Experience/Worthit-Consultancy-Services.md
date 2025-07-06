@@ -1,5 +1,7 @@
 *** 1st Round ***
 
+### What is the difference between DOM and Virtual DOM?(React Question)
+
 ### What is the difference between ngOnInit and ngAfterViewInit in Angular?
 
 ### What is a closure? Can you give a real-time example?
