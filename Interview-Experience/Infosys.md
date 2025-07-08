@@ -278,3 +278,10 @@ const [c, setC] = useState(0);
 Ans: This code will cause an infinite loop.
 
 #### 9. How do you implement useContext in your application?
+
+
+#### Power Programmer specialist L1 MERN - Round 3
+
+#### 1. Find the maximum sum of subarray.
+#### 2. Scenario based questions on event bubbling and stopPropagresstion, 
+#### 3. Qustions on optimazation, tree shaking, event loop.
