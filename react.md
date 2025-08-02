@@ -1,4 +1,4 @@
-#### 1. How do you optimize your react application ?
+##### 1. How do you optimize your react application ?
 
 - **Code Splitting**: Break down large bundles into smaller chunks to reduce initial load times
 - **Lazy Loading**: Load non-essential components\asynchronously to prioritize critical content.
@@ -11,7 +11,7 @@
 - **Optimize rendering with keys**: - Ensure each list item in a mapped array has a unique and stable key prop to optimize rendering performance. Keys help React identify which items have changed, been added, or removed, minimizing unnecessary DOM updates.
 - **CDN Integration**: Serve static assets and resources from Content Delivery Networks (CDNs) to reduce latency and improve reliability.
 
-#### 2. What is useRef hook?
+##### 2. What is useRef hook?
 useRef is a React Hook used to persist values between renders without causing re-renders.
 It’s commonly used for:
 
@@ -73,7 +73,7 @@ function PreviousValue() {
 
 ```
 
-#### 3. What is UseEffect hook and common pitfalls developers encounter when working with UseEffect, and how do you avoid them?
+##### 3. What is UseEffect hook and common pitfalls developers encounter when working with UseEffect, and how do you avoid them?
 The useEffect hook is React's way to handle side effects in functional components - things like data fetching, subscriptions, timers, or manually updating the DOM. It essentially combines the functionality of componentDidMount, componentDidUpdate, and componentWillUnmount from class components.
 
 **Most Common Mistakes:**
@@ -90,7 +90,7 @@ The useEffect hook is React's way to handle side effects in functional component
 - Use useCallback/useMemo for complex dependencies
 
 
-#### 4. Output of below code?
+##### 4. Output of below code?
 ```
 import { useState, useEffect } from 'react';
 
@@ -119,3 +119,32 @@ After scheduling updates (still stale): 0
 Render with c = 3
 
 ```
+
+##### 5. What is useMemo()?
+example: https://stackblitz.com/edit/react-ku9s1anp?file=src%2FApp.js
+
+useMemo is a React optimization hook that remembers the return value of a function between renders, as long as its dependencies don’t change.
+
+Component Function Call
+└── useMemo
+    ├── Did deps change? (shallow check)
+    │   ├── No → return previous value (cached)
+    │   └── Yes → re-run factory, update value
+
+⚙️ Under-the-Hood Flow of useMemo
+- On Initial Render:
+  └──  React calls your component.
+  └── When it hits useMemo(fn, deps):
+      └──It executes fn()
+      └──It stores the return value and the deps
+      └──Returns that result to your component
+
+- On Re-render:
+  └── React again calls your component
+  └── When it reaches the same hook slot:
+    └── It compares new deps with previous deps using shallow comparison
+      └── === is used per item (not deep compare)
+    └──If any dependency changed:
+      └── Re-run fn(), store new result and new deps
+    └── If all dependencies are equal:
+        └──Skip fn(), return cached value
