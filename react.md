@@ -148,3 +148,41 @@ Component Function Call
       └── Re-run fn(), store new result and new deps
     └── If all dependencies are equal:
         └──Skip fn(), return cached value
+
+##### 6. What is difference between useMemo() and useCallBack?
+
+| Hook          | Purpose                                              | Returns                                   |
+| ------------- | ---------------------------------------------------- | ----------------------------------------- |
+| `useMemo`     | Caches the result of a computation                   | The **value** returned by the computation |
+| `useCallback` | Caches a function so it's not recreated every render | The **function** itself                   |
+
+They both cache, but:
+
+- useMemo caches a value (e.g. a number, object, JSX)
+- useCallback caches a function
+
+Internals Structure
+React keeps a data structure like:
+
+```
+[
+  { memoizedValue: ..., deps: [...] }, // useMemo
+  { memoizedCallback: ..., deps: [...] }, // useCallback
+  ...
+]
+```
+
+🔄 Practical Difference in Behavior
+
+```
+const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
+const memoizedCallback = useCallback(() => doSomething(a), [a]);
+```
+
+- useMemo calls the function and returns a result
+- useCallback returns the function (does not invoke it)
+
+- usememo: Memoizing expensive calculations (e.g., filtering, sorting, mapping large arrays).
+- useCallBack: Preventing unnecessary re-renders of child components by memoizing functions passed as props.
+
+
