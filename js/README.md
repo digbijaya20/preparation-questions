@@ -194,4 +194,70 @@ loadUserAndPosts();
 | **Parallelism**    | Explicit with `Promise.all()`                           | Also supported via `await Promise.all()` |
 
 
+### 5.  🔁 What is Arrow Function? How it is difference from normal function?
 
+1. Lexical this Binding (No Need for .bind(this))
+Arrow functions inherit this from the surrounding scope.
+
+This makes them perfect for callbacks, especially in class components or closures, where maintaining this is important.
+
+```
+class Button {
+  constructor() {
+    this.label = "Click me";
+  }
+
+  handleClick = () => {
+    console.log(this.label); // Works fine
+  }
+}
+```
+
+❌ Regular function:
+```
+handleClick() {
+  console.log(this.label); // `this` is undefined unless bound manually
+}
+
+```
+➡ No need for .bind(this) in constructors or event handlers.
+
+⚠️ When NOT to Use Arrow Functions
+
+| Use Case                              | Better with Regular Function |
+| ------------------------------------- | ---------------------------- |
+| Object methods needing dynamic `this` | ✅ Regular function           |
+| Constructor functions                 | ✅ Regular function           |
+| Needing `prototype`                   | ✅ Regular function           |
+| Needing `arguments` object            | ✅ Regular function           |
+
+🆚 Arrow Function vs Regular Function — Deep Comparison
+
+
+| Feature                        | **Arrow Function**                                                 | **Regular Function**                                            |
+| ------------------------------ | ------------------------------------------------------------------ | --------------------------------------------------------------- |
+| 🔁 `this` Binding              | Inherits `this` from the surrounding (lexical) scope               | Has its own `this` based on how it's called (dynamic binding)   |
+| 🧱 `new` (constructor)         | ❌ Cannot be used as a constructor (`new ArrowFunc()` throws error) | ✅ Can be used with `new` to create instances                    |
+| 📦 `arguments` Object          | ❌ Doesn’t have its own `arguments` object                          | ✅ Has its own `arguments` object                                |
+| 🔄 `super` & `this` in classes | Inherits `super`/`this` from outer scope (good for class methods)  | Has its own `this` and `super`, must manage context manually    |
+| 🧬 `prototype` Property        | ❌ No `prototype`, can't be extended or used with inheritance       | ✅ Has `prototype`, can define methods or use inheritance        |
+| 💬 Syntax                      | Shorter and cleaner, especially for inline functions               | More verbose, but more powerful in complex cases                |
+| 🔁 Binding Required            | ❌ No need to bind manually in most cases                           | ✅ May need `.bind(this)` to access the right `this` context     |
+| 📍 Use Case                    | Best for: callbacks, one-liners, React events, functional code     | Best for: constructors, object methods, dynamic `this` behavior |
+
+
+1. this Difference
+```
+const obj = {
+  value: 42,
+  regular: function() {
+    console.log(this.value);
+  },
+  arrow: () => {
+    console.log(this.value);
+  }
+};
+
+obj.regular(); // 42 → has its own `this` (bound to obj)
+obj.arrow();   // undefined → `this` comes from outer scope (usually window/global)
+```
