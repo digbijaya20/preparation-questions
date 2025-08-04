@@ -186,3 +186,26 @@ const memoizedCallback = useCallback(() => doSomething(a), [a]);
 - useCallBack: Preventing unnecessary re-renders of child components by memoizing functions passed as props.
 
 
+##### 6. What is Re-rendering? How to control it.
+- Re-redering is the process where React updated the UI based on state or process changes.
+- Whenever a component's state updates, or it recieves a new props, it re-renders- along with it's child component(unless optimized)
+
+When Does Re-dendering happen?
+- When useState or useReducer values changes
+- When Parent component re-renders(childern re-render by default)
+- When props passed to a component change
+- When context values changes and the component uses useContext
+
+Why Re-rendering can be a problem?
+In small apps, React handles re-rendering super efficiently.
+But in large apps with:
+- Expensive components(Images, charts, etc)
+- Deep nested components
+- Repetitive updates
+so unnecessary re-renders can hurt performance.
+
+How to Optimize re-rendering?
+
+- **React.memo()**: Wrap functional components to prevent re-rendering unless props actually change.
+- **useCallback()**: Prevents function props from being re-created on every render - usefull when passing callbacks to child components
+- **useMemo()**:
