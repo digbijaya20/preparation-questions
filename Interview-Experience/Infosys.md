@@ -287,3 +287,47 @@ Ans: This code will cause an infinite loop.
 #### 3. What is memo? difference between react memo and usememo?
 #### 2. Scenario based questions on event bubbling and stopPropagresstion, 
 #### 3. Qustions on optimazation, tree shaking, event loop.
+
+
+
+# Candidate-2, R1(React)
+
+HTML & CSS
+
+1. Difference between HTML5 and HTML4.
+2. Explain Web Workers in HTML5.
+3. Difference between SVG and Canvas.
+4. Box model in CSS.
+5. Vertically and horizontally center a div (Tailwind CSS).
+
+JavaScript
+
+6. Closures in JavaScript.
+7. Arrays vs Objects.
+8. Reverse your name using JavaScript.
+9. REST operator and Spread Operator in JavaScript.
+10. Nullish coalescing operator.
+11. Ternary operator.
+12. Garbage collector in JavaScript.
+13. Object-oriented concepts in JavaScript.
+14. Overloading and overriding in JavaScript
+
+React.js
+
+15. What is React.js.
+16. Functional component vs Class component in React.
+17. Pure functions in JavaScript/React.
+18. Why we are using React Fragments.
+19. React Hooks.
+20. Context API vs Redux.
+21. How to improve the performance of a React application.
+22. Fetch API in React (using fetch).
+23. Async keyword with fetch or axios.
+
+Project & Behavioral Questions
+
+24. Project domain (e.g., banking, e-commerce, retail).
+25. Your strength apart from hobbies.
+26. About Project (Team size, Domain, Methodology, Scrum calls).
+27. How long will you stay in our company if selected.
+28. Where do you see yourself after 5 years.
