@@ -59,4 +59,4 @@ Section: 4 > coding challenge for db(coderbyte)
   - A form with title and content and a submit button
   - on submit the note should be displayed below in list or, table form
   - each row must have edit option and on click a save changes button must be there
-  - After editing Save changes must update the note
+  - After editing Save changes must update the notes
