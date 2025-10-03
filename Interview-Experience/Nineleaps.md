@@ -54,3 +54,36 @@ For code refer the path ./code/nineleaps
     GROUP BY c.customer_id, c.name
     ORDER BY total_spent DESC
     LIMIT 3;`
+
+
+### Round-2 : By Saravanan KV(CTO nineleaps)
+
+1. What was your roles and responsibility in the recent project you have worked at your company?
+2. What's the difference between express.js and nest.js and which is better?
+3. Suppose you are building an e-commerce application, which framework will you choose and why?
+4. What's the difference between put and patch method?
+5. if you are writing a post API what will be the error handling scenarios with error code?
+6. What's difference between monolithic and microservice?
+7. How the services communicate in microservices...which one do you use?
+8. How event loop works in node.js?
+9. What are guards in nest.js?
+10. How do you handle aunthentication in nest?
+11. Explain me the flow in a nest application.
+12. How do you design your db models?
+13. What's indexing?
+14. Which db is better SQL or, noSQL and why?
+15. if you have an e-commerce platform and you can add items, remove items with price, what will be your sql table structure?
+16. How do you handle multi threading in node.js?
+17. What's a middleware?
+18. What ORM you are familiar with?
+19. How do you handle huge data through API?
+20. What are the metrics you check while reviewing code?
+21. How do you handle routing in nest.js?
+
+
+### Round-3 : Manager round
+
+1. What tech stack you have worked with?
+2. What database you are familiar with?
+3. What is the current team size that you work with?
+4. How often do you interact with clients?
